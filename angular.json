@@ -120,6 +120,111 @@
           }
         }
       }
+    },
+    "store": {
+      "projectType": "library",
+      "root": "projects/store",
+      "sourceRoot": "projects/store/src",
+      "prefix": "str",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/store/tsconfig.lib.json",
+            "project": "projects/store/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/store/src/test.ts",
+            "tsConfig": "projects/store/tsconfig.spec.json",
+            "karmaConfig": "projects/store/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/store/tsconfig.lib.json",
+              "projects/store/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "inventory": {
+      "projectType": "library",
+      "root": "projects/inventory",
+      "sourceRoot": "projects/inventory/src",
+      "prefix": "inv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/inventory/tsconfig.lib.json",
+            "project": "projects/inventory/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/inventory/src/test.ts",
+            "tsConfig": "projects/inventory/tsconfig.spec.json",
+            "karmaConfig": "projects/inventory/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/inventory/tsconfig.lib.json",
+              "projects/inventory/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "generator": {
+      "projectType": "library",
+      "root": "projects/generator",
+      "sourceRoot": "projects/generator/src",
+      "prefix": "gen",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/generator/tsconfig.lib.json",
+            "project": "projects/generator/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/generator/src/test.ts",
+            "tsConfig": "projects/generator/tsconfig.spec.json",
+            "karmaConfig": "projects/generator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/generator/tsconfig.lib.json",
+              "projects/generator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "cdbookstore"
 }
