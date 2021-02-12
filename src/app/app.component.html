@@ -1,5 +1,9 @@
 <h1>TEST</h1>
 <br>
-
+<input type="text" id="txtValue" (input)="updateTextValue($event)"/>
 <h2>Click on button to get users data</h2>
-<button id="test2" (click)="getTest2()">Fetch Users Data</button>
+<button id="test2" class="btn btn-primary" (click)="getTest2()">Fetch Users Data</button>
+<div>
+    <pre>{{users | json}}</pre>
+    {{typeof(42)}}
+</div>
